@@ -1,0 +1,32 @@
+[
+    {
+        "task": "laundry",
+        "number": 1,
+        "status": "complete"
+    },
+    {
+        "task": "dishes",
+        "number": 2,
+        "status": "complete"
+    },
+    {
+        "task": "trash",
+        "number": 3,
+        "status": "complete"
+    },
+    {
+        "task": "sweep",
+        "number": 4,
+        "status": "incomplete"
+    },
+    {
+        "task": "mow",
+        "number": 5,
+        "status": "complete"
+    },
+    {
+        "task": "get water",
+        "number": 6,
+        "status": "incomplete"
+    }
+]

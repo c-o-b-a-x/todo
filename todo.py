@@ -36,35 +36,35 @@ def change_status(data):
             save_tasks(data)
             break
 
+def action1(data):
+    status = "complete"
+    status_tasks(data, status)
+def action2(data):
+    status = "incomplete"
+    status_tasks(data, status)
+
+def action5(data):
+    number = len(data) + 1
+    task = input("What task would you like to add: ")
+    add_task(data, number, task)
+    view_tasks(data)
 def get_input(data):
     while True:
-        action = input("""Please choose an option:
-1. View completed tasks
-2. View incomplete tasks
-3. View all tasks
-4. Mark a task as complete
-5. Add a new task
-6. Quit
-choice: """)
+        action = input("""Please choose an option:\n1. View completed tasks\n2. View incomplete tasks \n 3. View all tasks \n 4. Mark a task as complete\n5. Add a new task\n6. Quit\n choice: """)
         try:
             action = int(action)
             if action == 1:
-                status = "complete"
-                status_tasks(data, status)
+                action1(data)
             elif action == 2:
-                status = "incomplete"
-                status_tasks(data, status)
+                action2(data)
             elif action == 3:
                 view_tasks(data)
             elif action == 4:
                 change_status(data)
             elif action == 5:
-                number = len(data) + 1
-                task = input("What task would you like to add: ")
-                add_task(data, number, task)
-                view_tasks(data)
+                action5(data)
             elif action == 6:
-                break
+                quit()
             else:
                 print("invalid choice")
         except ValueError:
